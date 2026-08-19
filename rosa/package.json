@@ -1,0 +1,36 @@
+{
+  "name": "@genart/rosa",
+  "version": "0.1.0",
+  "description": "Tiny, deterministic flower avatars rendered on Canvas.",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "src/index.js",
+    "src/index.d.ts",
+    "dist/rosa.global.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build-global.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "avatar",
+    "canvas",
+    "deterministic",
+    "generative-art",
+    "seeded"
+  ],
+  "license": "MIT"
+}

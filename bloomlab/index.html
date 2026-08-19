@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eae7dc" />
+    <title>Bloom Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand"><span aria-hidden="true">✣</span> Bloom Lab</div>
+        <div class="status"><i></i> rosa <b>0.1.0</b></div>
+      </header>
+
+      <main class="workspace">
+        <section class="preview-pane" aria-label="Flower preview">
+          <div class="canvas-wrap">
+            <canvas id="flower" width="720" height="720" aria-label="Generated flower avatar"></canvas>
+          </div>
+          <div class="preview-caption">
+            <span id="specimen-name"></span>
+            <span>720 × 720</span>
+          </div>
+        </section>
+
+        <aside class="panel">
+          <section class="controls">
+            <div class="section-label"><span>Seed</span><kbd>Enter</kbd></div>
+            <form id="seed-form">
+              <input id="seed" name="seed" autocomplete="off" spellcheck="false" maxlength="120" />
+              <button type="submit">Render</button>
+            </form>
+            <div class="button-row">
+              <button id="surprise" class="secondary" type="button">Random seed</button>
+              <button id="download" class="secondary" type="button">Export PNG</button>
+            </div>
+          </section>
+
+          <section class="variants">
+            <div class="section-label">
+              <span>Variants</span>
+              <button id="refresh-grid" class="icon-button" type="button" aria-label="Refresh variants">↻</button>
+            </div>
+            <div id="flower-grid" class="flower-grid"></div>
+          </section>
+
+          <details class="blueprint-drawer">
+            <summary>Blueprint JSON <span>›</span></summary>
+            <pre id="blueprint"></pre>
+          </details>
+        </aside>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

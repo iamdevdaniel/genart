@@ -1,0 +1,12 @@
+{
+  "name": "flower-gen-monorepo",
+  "private": true,
+  "workspaces": [
+    "*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @genart/rosa",
+    "test": "npm test -w @genart/rosa",
+    "dev": "npm run dev -w bloomlab"
+  }
+}
